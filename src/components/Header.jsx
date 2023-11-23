@@ -7,15 +7,14 @@ function Header({ activeMenu, setActiveMenu }) {
   ]
   const handleClick = () => {
     setActiveMenu(!activeMenu)
-    console.log(activeMenu)
   }
   return (
     <header className='p-4 relative flex justify-between items-center'>
-      <span className='text-xl'>PIZZA'S</span>
+      <span className='text-xl text-slate-50 font-medium'>PIZZA'S</span>
       <button
         className={`${
-          activeMenu ? 'absolute right-[calc(50%+22px)]' : 'block'
-        } hover:text-slate-50`}
+          activeMenu ? '-translate-x-[calc(50vw-8px)]' : 'block'
+        } hover:text-dark hover:bg-slate-200 rounded transition-all`}
         onClick={handleClick}
       >
         {activeMenu ? (
@@ -56,11 +55,15 @@ function Header({ activeMenu, setActiveMenu }) {
       <nav
         className={`${
           activeMenu ? 'block' : 'translate-x-[calc(100%+30px)]'
-        } absolute w-1/2 bg-dark-light right-4 top-4 rounded-md transition-all`}
+        } absolute w-1/2 bg-dark-light top-0 right-0 rounded-l-md transition-all h-screen`}
       >
-        <ul className='flex flex-col gap-5 items-center p-4'>
+        <ul className='flex flex-col gap-3 items-start p-4'>
           {ITEMS.map(({ id, name }) => (
-            <li className='cursor-pointer hover:text-slate-50' key={id}>
+            <li
+              className=' w-full cursor-pointer hover:text-dark px-3 py-1 hover:bg-slate-200 rounded'
+              onClick={handleClick}
+              key={id}
+            >
               {name}
             </li>
           ))}

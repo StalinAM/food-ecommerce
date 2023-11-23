@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import Header from './components/Header'
 
 function App() {
+  const [activeMenu, setActiveMenu] = useState(false)
   return (
     <>
-      <Header />
+      <Header activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
     </>
   )
 }

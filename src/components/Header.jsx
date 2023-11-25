@@ -9,7 +9,7 @@ function Header({ activeMenu, setActiveMenu }) {
     setActiveMenu(!activeMenu)
   }
   return (
-    <header className='p-4 relative flex justify-between items-center'>
+    <header className='p-4 relative flex justify-between items-center '>
       <span className='text-xl text-slate-50 font-medium'>PIZZA'S</span>
       <button
         className={`${
@@ -55,7 +55,7 @@ function Header({ activeMenu, setActiveMenu }) {
       <nav
         className={`${
           activeMenu ? 'block' : 'translate-x-[calc(100%+30px)]'
-        } absolute w-1/2 bg-dark-light top-0 right-0 rounded-l-md transition-all h-screen`}
+        } absolute w-1/2 bg-dark-light top-0 right-0 rounded-l-md transition-all h-screen z-20`}
       >
         <ul className='flex flex-col gap-3 items-start p-4'>
           {ITEMS.map(({ id, name }) => (

@@ -13,7 +13,7 @@ function Header({ activeMenu, setActiveMenu }) {
       <span className='text-xl text-slate-50 font-medium'>PIZZA'S</span>
       <button
         className={`${
-          activeMenu ? '-translate-x-[calc(50vw-8px)]' : 'block'
+          activeMenu ? '-translate-x-[calc(50vw-8px)]  z-30' : 'block'
         } hover:text-dark hover:bg-slate-200 rounded transition-all`}
         onClick={handleClick}
       >
@@ -68,6 +68,12 @@ function Header({ activeMenu, setActiveMenu }) {
             </li>
           ))}
         </ul>
+        <div
+          onClick={handleClick}
+          className={`${
+            activeMenu ? '-translate-x-full' : 'translate-x-full'
+          } top-0 absolute backdrop-blur-[1.5px] w-full h-full`}
+        ></div>
       </nav>
     </header>
   )

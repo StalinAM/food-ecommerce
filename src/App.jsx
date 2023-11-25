@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
-      <main className='p-4'>
+      <main className='p-4 w-full'>
         <Filter />
       </main>
     </>

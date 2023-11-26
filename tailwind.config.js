@@ -7,6 +7,7 @@ export default {
         js: '#fbae17',
         dark: '#161616',
         'dark-light': '#242424',
+        'dark-300': '#616162',
         light: '#f5f5f5',
         'light-2': '#ededed',
         css: '#0070ba'

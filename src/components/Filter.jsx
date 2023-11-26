@@ -3,7 +3,7 @@ function Filter() {
     <section className='flex gap-4 w-full justify-between items-center'>
       <div className='w-full relative'>
         <svg
-          className='absolute top-2 left-2'
+          className='absolute top-[7px] left-2 text-dark-300'
           xmlns='http://www.w3.org/2000/svg'
           width='18'
           height='18'
@@ -19,9 +19,9 @@ function Filter() {
           <path d='M21 21l-6 -6' />
         </svg>
         <input
-          className='w-full focus-visible:outline-none rounded pr-2 pl-8 py-1 bg-gray-50 dark:bg-dark-light text-slate-900 dark:text-slate-100'
+          className='w-full focus-visible:outline-none rounded pr-2 pl-8 py-1 bg-gray-50 dark:bg-dark-light text-slate-900 dark:text-slate-100 placeholder:text-dark-300'
           type='text'
-          placeholder='Buscar...'
+          placeholder='Buscar'
         />
       </div>
       <button className='bg-dark-light rounded p-1'>

@@ -12,7 +12,7 @@ function App() {
         <Filter />
         <section className='flex flex-col gap-2'>
           <header className='flex justify-between items-center'>
-            <h2 className='text-slate-100 font-medium'>Productos</h2>
+            <h2 className='dark:text-slate-100 font-medium'>Productos</h2>
             <button className='flex items-center text-sm'>
               <span>Ver mas</span>
               <svg
@@ -31,7 +31,16 @@ function App() {
               </svg>
             </button>
           </header>
-          <ul>
+          <ul className='grid grid-cols-2 gap-2'>
+            <li>
+              <Item />
+            </li>
+            <li>
+              <Item />
+            </li>
+            <li>
+              <Item />
+            </li>
             <li>
               <Item />
             </li>

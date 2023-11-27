@@ -14,7 +14,7 @@ function Header({ activeMenu, setActiveMenu }) {
       <button
         className={`${
           activeMenu ? '-translate-x-[calc(50vw-8px)]  z-30' : 'block'
-        } hover:text-dark hover:bg-slate-200 rounded transition-all`}
+        } hover:text-dark hover:bg-slate-200 rounded-md transition-all`}
         onClick={handleClick}
       >
         {activeMenu ? (
@@ -60,7 +60,7 @@ function Header({ activeMenu, setActiveMenu }) {
         <ul className='flex flex-col gap-3 items-start p-4'>
           {ITEMS.map(({ id, name }) => (
             <li
-              className=' w-full cursor-pointer hover:text-dark px-3 py-1 hover:bg-slate-200 rounded'
+              className=' w-full cursor-pointer hover:text-dark px-3 py-1 hover:bg-slate-200 rounded-md'
               onClick={handleClick}
               key={id}
             >

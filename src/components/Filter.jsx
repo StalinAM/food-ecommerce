@@ -19,12 +19,12 @@ function Filter() {
           <path d='M21 21l-6 -6' />
         </svg>
         <input
-          className='w-full focus-visible:outline-none rounded pr-2 pl-8 py-1 bg-gray-50 dark:bg-dark-light text-slate-900 dark:text-slate-100 placeholder:text-dark-300'
+          className='w-full focus-visible:outline-none rounded-md pr-2 pl-8 py-1 bg-gray-50 dark:bg-dark-light text-slate-900 dark:text-slate-100 placeholder:text-dark-300'
           type='text'
           placeholder='Buscar'
         />
       </div>
-      <button className='bg-dark-light rounded p-1'>
+      <button className='bg-dark-light rounded-md p-1'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'

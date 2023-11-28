@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Filter from './components/Filter'
 import Item from './components/Item'
+import Banner from './components/Banner'
 
 function App() {
   const [activeMenu, setActiveMenu] = useState(false)
@@ -10,6 +11,7 @@ function App() {
       <Header activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
       <main className='px-4 pt-2 pb-4 w-full flex flex-col gap-6'>
         <Filter />
+        <Banner />
         <section className='flex flex-col gap-2'>
           <header className='flex justify-between items-center'>
             <h2 className='dark:text-slate-100 font-medium'>Productos</h2>
@@ -31,7 +33,7 @@ function App() {
               </svg>
             </button>
           </header>
-          <ul className='grid grid-cols-2 gap-2'>
+          <ul className='grid grid-cols-2 gap-4'>
             <li>
               <Item />
             </li>

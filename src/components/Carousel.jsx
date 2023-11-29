@@ -5,7 +5,6 @@ function Carousel({
   autoSlideInterval = 3000
 }) {
   const [curr, setCurr] = useState(0)
-  console.log(slides)
 
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1))
@@ -14,9 +13,13 @@ function Carousel({
 
   useEffect(() => {
     if (!autoSlide) return
-    const slideInterval = setInterval(next, autoSlideInterval)
+    const slideInterval = setInterval(() => {
+      setCurr((prevCurr) => (prevCurr === slides.length - 1 ? 0 : prevCurr + 1))
+    }, autoSlideInterval)
+
     return () => clearInterval(slideInterval)
-  }, [])
+  }, [autoSlide, autoSlideInterval, slides.length])
+
   return (
     <div className='overflow-hidden relative'>
       <ul
@@ -25,10 +28,10 @@ function Carousel({
       >
         {slides}
       </ul>
-      <div className='absolute inset-0 flex items-center justify-between p-4'>
+      <div className='absolute -inset-2 flex items-center justify-between'>
         <button
           onClick={prev}
-          className='p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white'
+          className=' rounded-full dark:text-slate-400 dark:hover:text-white'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -47,7 +50,7 @@ function Carousel({
         </button>
         <button
           onClick={next}
-          className='p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white'
+          className=' rounded-full dark:text-slate-400 dark:hover:text-white'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -66,14 +69,14 @@ function Carousel({
         </button>
       </div>
 
-      <div className='absolute bottom-4 right-0 left-0'>
+      <div className='absolute bottom-0 right-0 left-0'>
         <div className='flex items-center justify-center gap-2'>
           {slides?.map((_, i) => (
             <div
               key={i}
               className={`
-              transition-all w-3 h-3 bg-white rounded-full
-              ${curr === i ? 'p-2' : 'bg-opacity-50'}
+              transition-all w-2 h-2 bg-white rounded-full
+              ${curr === i ? 'w-5' : 'bg-opacity-50'}
             `}
             />
           ))}

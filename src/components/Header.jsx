@@ -11,8 +11,8 @@ function Header({ activeMenu, setActiveMenu }) {
   return (
     <header className='p-4 relative flex justify-between items-center '>
       <span className='text-xl text-slate-50 font-medium'>PIZZA'S</span>
-      <div className='flex gap-2'>
-        <button>
+      <div className='flex gap-4'>
+        <button className='relative'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'
@@ -30,10 +30,13 @@ function Header({ activeMenu, setActiveMenu }) {
             <path d='M17 17h-11v-14h-2' />
             <path d='M6 5l14 1l-1 7h-13' />
           </svg>
+          <div className='flex items-center absolute w-5 h-5 -top-1 -right-1.5 dark:bg-dark-light rounded-full text-xs font-medium text-slate-50'>
+            <span className='m-auto'>0</span>
+          </div>
         </button>
         <button
           className={`${
-            activeMenu ? '-translate-x-[calc(280px)] fixed z-30' : 'block'
+            activeMenu ? '-translate-x-[200px] fixed z-30' : 'block'
           } hover:text-dark hover:bg-slate-200 rounded-md transition-[transform]`}
           onClick={handleClick}
         >
@@ -76,7 +79,7 @@ function Header({ activeMenu, setActiveMenu }) {
       <nav
         className={`${
           activeMenu ? 'block' : 'translate-x-[calc(100%+30px)]'
-        } fixed w-72 bg-dark-light top-0 right-0 rounded-l-md transition-all h-screen z-20`}
+        } fixed w-52 bg-dark-light top-0 right-0 rounded-l-md transition-all h-screen z-20`}
       >
         <ul className='flex flex-col gap-3 items-start p-4'>
           {ITEMS.map(({ id, name }) => (

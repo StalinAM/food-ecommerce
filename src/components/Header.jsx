@@ -11,17 +11,12 @@ function Header({ activeMenu, setActiveMenu }) {
   return (
     <header className='p-4 relative flex justify-between items-center '>
       <span className='text-xl text-slate-50 font-medium'>PIZZA'S</span>
-      <button
-        className={`${
-          activeMenu ? '-translate-x-[calc(50vw-8px)]  z-30' : 'block'
-        } hover:text-dark hover:bg-slate-200 rounded-md transition-all`}
-        onClick={handleClick}
-      >
-        {activeMenu ? (
+      <div className='flex gap-2'>
+        <button>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            width='28'
-            height='28'
+            width='24'
+            height='24'
             viewBox='0 0 24 24'
             strokeWidth='2'
             stroke='currentColor'
@@ -30,32 +25,58 @@ function Header({ activeMenu, setActiveMenu }) {
             strokeLinejoin='round'
           >
             <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <path d='M18 6l-12 12' />
-            <path d='M6 6l12 12' />
+            <path d='M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
+            <path d='M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
+            <path d='M17 17h-11v-14h-2' />
+            <path d='M6 5l14 1l-1 7h-13' />
           </svg>
-        ) : (
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='28'
-            height='28'
-            viewBox='0 0 24 24'
-            strokeWidth='2'
-            stroke='currentColor'
-            fill='none'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          >
-            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <path d='M4 6l16 0' />
-            <path d='M4 12l16 0' />
-            <path d='M4 18l16 0' />
-          </svg>
-        )}
-      </button>
+        </button>
+        <button
+          className={`${
+            activeMenu ? '-translate-x-[calc(280px)] fixed z-30' : 'block'
+          } hover:text-dark hover:bg-slate-200 rounded-md transition-[transform]`}
+          onClick={handleClick}
+        >
+          {activeMenu ? (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='28'
+              height='28'
+              viewBox='0 0 24 24'
+              strokeWidth='2'
+              stroke='currentColor'
+              fill='none'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+              <path d='M18 6l-12 12' />
+              <path d='M6 6l12 12' />
+            </svg>
+          ) : (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='28'
+              height='28'
+              viewBox='0 0 24 24'
+              strokeWidth='2'
+              stroke='currentColor'
+              fill='none'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+              <path d='M4 6l16 0' />
+              <path d='M4 12l16 0' />
+              <path d='M4 18l16 0' />
+            </svg>
+          )}
+        </button>
+      </div>
       <nav
         className={`${
           activeMenu ? 'block' : 'translate-x-[calc(100%+30px)]'
-        } absolute w-1/2 bg-dark-light top-0 right-0 rounded-l-md transition-all h-screen z-20`}
+        } fixed w-72 bg-dark-light top-0 right-0 rounded-l-md transition-all h-screen z-20`}
       >
         <ul className='flex flex-col gap-3 items-start p-4'>
           {ITEMS.map(({ id, name }) => (

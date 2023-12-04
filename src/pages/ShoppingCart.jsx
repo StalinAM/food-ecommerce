@@ -21,7 +21,7 @@ function ShoppingCart() {
           <ItemCart />
         </li>
       </ul>
-      <button className='border-2 dark:hover:bg-transparent dark:hover:text-slate-100 dark:bg-slate-100 dark:text-dark font-medium text-lg rounded-md py-1'>
+      <button className='border-[1px] dark:hover:bg-transparent dark:hover:text-slate-100 dark:bg-slate-100 dark:text-dark text-lg font-medium rounded-md py-1'>
         Enviar pedido
       </button>
     </section>

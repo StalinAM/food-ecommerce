@@ -1,3 +1,5 @@
+import { Burger, Cart, Close } from '../assets/icons/Icons'
+
 function Header({ activeMenu, setActiveMenu }) {
   const ITEMS = [
     { id: 1, name: 'About' },
@@ -13,23 +15,7 @@ function Header({ activeMenu, setActiveMenu }) {
       <span className='text-xl text-slate-50 font-medium'>PIZZA'S</span>
       <div className='flex gap-4'>
         <button className='relative'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            strokeWidth='2'
-            stroke='currentColor'
-            fill='none'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          >
-            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <path d='M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
-            <path d='M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
-            <path d='M17 17h-11v-14h-2' />
-            <path d='M6 5l14 1l-1 7h-13' />
-          </svg>
+          <Cart size='24' />
           <div className='flex items-center absolute w-5 h-5 -top-1 -right-1.5 dark:bg-dark-light rounded-full text-xs font-medium text-slate-50'>
             <span className='m-auto'>0</span>
           </div>
@@ -40,40 +26,7 @@ function Header({ activeMenu, setActiveMenu }) {
           } hover:text-dark hover:bg-slate-200 rounded-md transition-[transform]`}
           onClick={handleClick}
         >
-          {activeMenu ? (
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='28'
-              height='28'
-              viewBox='0 0 24 24'
-              strokeWidth='2'
-              stroke='currentColor'
-              fill='none'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            >
-              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-              <path d='M18 6l-12 12' />
-              <path d='M6 6l12 12' />
-            </svg>
-          ) : (
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='28'
-              height='28'
-              viewBox='0 0 24 24'
-              strokeWidth='2'
-              stroke='currentColor'
-              fill='none'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            >
-              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-              <path d='M4 6l16 0' />
-              <path d='M4 12l16 0' />
-              <path d='M4 18l16 0' />
-            </svg>
-          )}
+          {activeMenu ? <Close size='28' /> : <Burger size='28' />}
         </button>
       </div>
       <nav

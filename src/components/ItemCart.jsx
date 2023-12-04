@@ -1,3 +1,5 @@
+import { Delete, Minus, Plus } from '../assets/icons/Icons'
+
 function ItemCart() {
   return (
     <>
@@ -37,61 +39,17 @@ function ItemCart() {
           <span>$15.00</span>
         </div>
         <div className='flex gap-2'>
-          <div className='flex gap-4 items-center border-2 rounded-md px-2'>
+          <div className='flex gap-4 items-center border-[1px] rounded-md px-2'>
             <button className='dark:hover:text-slate-50'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='20'
-                height='20'
-                viewBox='0 0 24 24'
-                strokeWidth='2'
-                stroke='currentColor'
-                fill='none'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              >
-                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                <path d='M5 12l14 0' />
-              </svg>
+              <Minus size='20' />
             </button>
             <span className='text-lg dark:text-slate-50 font-medium'>10</span>
             <button className='dark:hover:text-slate-50'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='20'
-                height='20'
-                viewBox='0 0 24 24'
-                strokeWidth='2'
-                stroke='currentColor'
-                fill='none'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              >
-                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                <path d='M12 5l0 14' />
-                <path d='M5 12l14 0' />
-              </svg>
+              <Plus size='20' />
             </button>
           </div>
           <button className='dark:text-slate-100/50 hover:dark:text-slate-100'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='28'
-              height='28'
-              viewBox='0 0 24 24'
-              strokeWidth='2'
-              stroke='currentColor'
-              fill='none'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            >
-              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-              <path d='M4 7l16 0' />
-              <path d='M10 11l0 6' />
-              <path d='M14 11l0 6' />
-              <path d='M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12' />
-              <path d='M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3' />
-            </svg>
+            <Delete size='26' />
           </button>
         </div>
       </div>

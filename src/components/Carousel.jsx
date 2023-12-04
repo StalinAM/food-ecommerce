@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { ArrowLeft, ArrowRight } from '../assets/icons/Icons'
 function Carousel({
   children: slides,
   autoSlide = false,
@@ -33,39 +34,13 @@ function Carousel({
           onClick={prev}
           className=' rounded-full dark:text-slate-400 dark:hover:text-white'
         >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            strokeWidth='2'
-            stroke='currentColor'
-            fill='none'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          >
-            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <path d='M15 6l-6 6l6 6' />
-          </svg>
+          <ArrowLeft size='24' />
         </button>
         <button
           onClick={next}
           className=' rounded-full dark:text-slate-400 dark:hover:text-white'
         >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            strokeWidth='2'
-            stroke='currentColor'
-            fill='none'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          >
-            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <path d='M9 6l6 6l-6 6' />
-          </svg>
+          <ArrowRight size='24' />
         </button>
       </div>
 

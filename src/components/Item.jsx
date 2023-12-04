@@ -1,3 +1,5 @@
+import { Plus } from '../assets/icons/Icons'
+
 function Item() {
   return (
     <article className='p-3 dark:bg-dark-light rounded-md relative overflow-hidden flex flex-col gap-3'>
@@ -11,29 +13,15 @@ function Item() {
             Pizza de piña
           </h3>
         </header>
-        <div className='flex flex-col leading-5 dark:text-slate-100 font-bold text-lg'>
+        <div className='flex flex-col leading-6 dark:text-slate-100 font-bold text-lg'>
           <span className='text-xs dark:text-slate-100/60 font-normal'>
             $20.00
           </span>
           <span>$15.00</span>
         </div>
       </div>
-      <button className='absolute dark:bg-slate-50 rounded-tl-md bottom-0 right-0 w-10 h-10'>
-        <svg
-          className='m-auto dark:text-dark-300'
-          width='28'
-          height='28'
-          viewBox='0 0 24 24'
-          strokeWidth='2'
-          stroke='currentColor'
-          fill='none'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        >
-          <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-          <path d='M12 5l0 14' />
-          <path d='M5 12l14 0' />
-        </svg>
+      <button className='absolute border dark:bg-slate-50 rounded-tl-md rounded-br-md bottom-0 right-0 w-10 h-10 dark:text-dark-light flex justify-center items-center dark:hover:bg-transparent dark:hover:text-slate-100'>
+        <Plus size='28' />
       </button>
     </article>
   )

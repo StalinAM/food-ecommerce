@@ -10,8 +10,8 @@ function App() {
     <>
       <Header activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
       <main className='px-4 pt-2 pb-4 w-full flex flex-col gap-6'>
-        {/* <Home /> */}
-        <ShoppingCart />
+        <Home />
+        {/* <ShoppingCart /> */}
       </main>
     </>
   )

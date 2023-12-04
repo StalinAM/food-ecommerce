@@ -1,3 +1,4 @@
+import { ArrowRight } from '../assets/icons/Icons'
 import Item from './Item'
 
 function ListItems() {
@@ -7,20 +8,7 @@ function ListItems() {
         <h2 className='dark:text-slate-100 font-medium'>Productos</h2>
         <button className='flex items-center text-sm'>
           <span>Ver mas</span>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='18'
-            height='18'
-            viewBox='0 0 24 24'
-            strokeWidth='2'
-            stroke='currentColor'
-            fill='none'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          >
-            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <path d='M9 6l6 6l-6 6' />
-          </svg>
+          <ArrowRight size='18' />
         </button>
       </header>
       <ul className='grid grid-cols-2 gap-4'>

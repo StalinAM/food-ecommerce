@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom'
 import { Burger, Cart, Close } from '../assets/icons/Icons'
 
 function Header({ activeMenu, setActiveMenu }) {
   const ITEMS = [
-    { id: 1, name: 'About' },
-    { id: 2, name: 'Delivery' },
+    { id: 1, name: 'About', path: '/' },
+    { id: 2, name: 'Delivery', path: '/' },
     { id: 3, name: 'Locations' },
     { id: 4, name: 'Contact' }
   ]
@@ -12,14 +13,16 @@ function Header({ activeMenu, setActiveMenu }) {
   }
   return (
     <header className='p-4 relative flex justify-between items-center '>
-      <span className='text-xl text-slate-50 font-medium'>PIZZA'S</span>
+      <Link to='/' className='text-xl text-slate-50 font-medium'>
+        PIZZA'S
+      </Link>
       <div className='flex gap-4'>
-        <button className='relative'>
+        <Link to='shopping-cart' className='relative'>
           <Cart size='24' />
           <div className='flex items-center absolute w-5 h-5 -top-1 -right-1.5 dark:bg-dark-light rounded-full text-xs font-medium text-slate-50'>
             <span className='m-auto'>0</span>
           </div>
-        </button>
+        </Link>
         <button
           className={`${
             activeMenu ? '-translate-x-[200px] fixed z-30' : 'block'
@@ -49,7 +52,7 @@ function Header({ activeMenu, setActiveMenu }) {
           onClick={handleClick}
           className={`${
             activeMenu ? '-translate-x-full' : 'translate-x-full'
-          } top-0 absolute backdrop-blur-[1.5px] w-full h-full`}
+          } top-0 absolute backdrop-blur-[1.5px] w-screen h-full`}
         ></div>
       </nav>
     </header>

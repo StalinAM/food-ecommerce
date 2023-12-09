@@ -1,4 +1,5 @@
 import Carousel from '../components/Carousel'
+import Categories from '../components/Categories'
 import Filter from '../components/Filter'
 import ListItems from '../components/ListItems'
 

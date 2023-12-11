@@ -39,6 +39,17 @@ function ItemDetails() {
           </div>
         </li>
       </Carousel>
+      <section>
+        <header>
+          <h2 className='text-lg font-medium text-slate-100'>Pizza de pina</h2>
+          <ul>
+            Ingredientes
+            <li>peperoni</li>
+            <li>mizarella</li>
+          </ul>
+        </header>
+        <p>Esta es la mejor pizza del mundo entero</p>
+      </section>
       <button className='border-[1px] dark:hover:bg-transparent dark:hover:text-slate-100 dark:bg-slate-100 dark:text-dark text-lg font-medium rounded-md py-1'>
         Añadir carrito
       </button>

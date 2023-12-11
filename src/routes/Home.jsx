@@ -1,12 +1,10 @@
 import Carousel from '../components/Carousel'
-import Categories from '../components/Categories'
 import Filter from '../components/Filter'
 import ListItems from '../components/ListItems'
 
 function Home() {
   return (
     <>
-      <Filter />
       <Carousel>
         <li className='min-w-full p-3'>
           <article className='dark:bg-dark-light rounded-md p-4 h-44 flex flex-col justify-between'>
@@ -41,6 +39,7 @@ function Home() {
           </article>
         </li>
       </Carousel>
+      <Filter />
       <ListItems />
     </>
   )

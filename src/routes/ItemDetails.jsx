@@ -1,5 +1,6 @@
 import { ArrowLeft } from '../assets/icons/Icons'
 import Carousel from '../components/Carousel'
+import ListItems from '../components/ListItems'
 
 function ItemDetails() {
   return (
@@ -53,6 +54,7 @@ function ItemDetails() {
       <button className='border-[1px] dark:hover:bg-transparent dark:hover:text-slate-100 dark:bg-slate-100 dark:text-dark text-lg font-medium rounded-md py-1'>
         Añadir carrito
       </button>
+      <ListItems />
     </section>
   )
 }
